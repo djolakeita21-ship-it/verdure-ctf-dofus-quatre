@@ -1,0 +1,308 @@
+/* =================================================
+   PARTIE 1 – Réglages, en-tête, boutons, hero
+   ================================================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Nunito", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4A5A50;
+  background-color: #F7F5EF;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+h1, h2, h3, h4 {
+  color: #1F3A2D;
+  line-height: 1.2;
+}
+
+/* En-tête */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+}
+
+.logo {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #1F3A2D;
+}
+
+.logo span {
+  color: #E07A5F;
+}
+
+.menu {
+  display: flex;
+  gap: 40px;
+}
+
+.menu a {
+  font-weight: 600;
+  color: #1F3A2D;
+}
+
+.menu a:hover {
+  color: #E07A5F;
+}
+
+/* Boutons */
+.bouton {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: #E07A5F;
+  color: #FFFFFF;
+  font-weight: 700;
+  border: 2px solid #E07A5F;
+  border-radius: 30px;
+}
+
+.bouton:hover {
+  background-color: #C4634A;
+  border-color: #C4634A;
+}
+
+.bouton-contour {
+  background-color: transparent;
+  color: #1F3A2D;
+  border-color: #1F3A2D;
+}
+
+/* Hero en deux colonnes */
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  padding: 72px 80px;
+  background-color: #E3EDE4;
+}
+
+.hero-texte {
+  flex: 1;
+}
+
+.hero-image {
+  flex: 1;
+  height: 420px;
+  background-color: #4E7D5B;
+  border-radius: 200px 200px 24px 24px;
+}
+
+.surtitre {
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #C4634A;
+  margin-bottom: 12px;
+}
+
+.hero h1 {
+  font-size: 3.25rem;
+  margin-bottom: 20px;
+}
+
+.intro {
+  font-size: 1.125rem;
+  margin-bottom: 32px;
+}
+
+.hero-boutons {
+  display: flex;
+  gap: 16px;
+}
+
+/* =================================================
+   PARTIE 2 – Boutique
+   ================================================= */
+.boutique {
+  padding: 80px;
+}
+
+.boutique-entete {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.boutique h2 {
+  font-size: 2.25rem;
+}
+
+.lien-fleche {
+  font-weight: 700;
+  color: #E07A5F;
+}
+
+.produits {
+  display: flex;
+  gap: 32px;
+}
+
+.produit {
+  flex: 1;
+  padding: 16px 16px 20px;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+}
+
+.produit-image {
+  height: 220px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.image-1 { background-color: #8DB596; }
+.image-2 { background-color: #4E7D5B; }
+.image-3 { background-color: #C9D9A6; }
+
+.etiquette {
+  display: inline-block;
+  padding: 2px 12px;
+  background-color: #E3EDE4;
+  color: #2F5A40;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  border-radius: 20px;
+  margin-bottom: 8px;
+}
+
+.produit h3 {
+  font-size: 1.375rem;
+}
+
+.produit-bas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.prix {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #1F3A2D;
+}
+
+.bouton-ajouter {
+  padding: 8px 18px;
+  background-color: #1F3A2D;
+  color: #FFFFFF;
+  font-size: 0.875rem;
+  font-weight: 700;
+  border-radius: 20px;
+}
+
+.bouton-ajouter:hover {
+  background-color: #E07A5F;
+}
+
+/* =================================================
+   PARTIE 3 – Pied de page
+   ================================================= */
+.footer {
+  padding: 56px 80px 24px;
+  background-color: #1F3A2D;
+  color: #B9CCBE;
+}
+
+.footer .logo,
+.footer h4 {
+  color: #F7F5EF;
+}
+
+.footer-haut {
+  display: flex;
+  gap: 48px;
+  margin-bottom: 40px;
+}
+
+.footer-marque {
+  flex: 2;
+}
+
+.footer-colonne {
+  flex: 1;
+}
+
+.footer h4 {
+  font-size: 1.0625rem;
+  margin-bottom: 12px;
+}
+
+.footer-colonne li {
+  margin-bottom: 6px;
+}
+
+.footer-bas {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  border-top: 1px solid #355A46;
+  font-size: 0.875rem;
+}
+
+.footer-liens {
+  display: flex;
+  gap: 24px;
+}
+
+/* =================================================
+   VERDURE CTF – CSS minimal fourni
+   La mise en forme des nouveaux éléments (outils de recherche,
+   fiche plante, page panier, thème sombre) est à faire par vous.
+   ================================================= */
+
+/* Les éléments avec l'attribut hidden restent cachés */
+[hidden] {
+  display: none !important;
+}
+
+/* Le catalogue passe à la ligne : 3 cartes par ligne */
+.produits {
+  flex-wrap: wrap;
+}
+
+.produit {
+  flex: 0 1 calc((100% - 64px) / 3);
+}
+
+/* Mise en page minimale : le catalogue à gauche, le panier à droite */
+.boutique-page {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  padding: 0 80px 80px;
+}
+
+.boutique-page .boutique {
+  flex: 3;
+  padding: 48px 0 0;
+}
+
+.boutique-page .panier {
+  flex: 1;
+  margin-top: 48px;
+}
+
+/* Les pages ajoutées gardent les marges du site */
+.fiche,
+.contact {
+  padding: 48px 80px 80px;
+}

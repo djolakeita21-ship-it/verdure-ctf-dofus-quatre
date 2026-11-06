@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Verdure – Jardinerie de quartier</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- Scripts : ne pas changer l'ordre -->
+  <script src="js/ctf-config.js"></script>
+  <script src="js/plantes.js" defer></script>
+  <script src="js/commun.js" defer></script>
+  <script src="js/accueil.js" defer></script>
+   <script src="js/plantes.js" defer></script>
+  <script src="js/ctf.js" defer></script>
+
+</head>
+<body>
+
+  <header class="header">
+    <a href="index.html" class="logo">Verdure<span>.</span></a>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html" class="actif">Accueil</a></li>
+        <li><a href="index.html#boutique">Boutique</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button type="button" class="bouton-theme" id="bouton-theme">Thème sombre</button>
+      <a href="index.html#panier" class="bouton bouton-contour">Mon panier</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-texte">
+      <p class="surtitre">Jardinerie de quartier</p>
+      <h1>Des plantes faciles,<br>des conseils en plus</h1>
+      <p class="intro">Plantes d’intérieur, pots et terreau livrés chez vous en 48 h. Et si vous avez un doute, nos jardiniers vous répondent.</p>
+      <div class="hero-boutons">
+        <a href="#boutique" class="bouton">Voir la boutique</a>
+        <a href="#" class="bouton bouton-contour">Nos conseils</a>
+      </div>
+    </div>
+    <div class="hero-image"></div>
+  </section>
+
+  <!-- ===================== BOUTIQUE ===================== -->
+  <div class="boutique-page" id="boutique">
+
+    <section class="boutique">
+      <div class="boutique-entete">
+        <h2>Toutes nos plantes</h2>
+        <p class="nb-plantes" id="nb-plantes"></p>
+      </div>
+      <div class="outils">
+        <input type="search" id="recherche" placeholder="Rechercher une plante…" aria-label="Rechercher une plante">
+        <select id="filtre-difficulte" aria-label="Filtrer par difficulté">
+          <option value="toutes">Toutes les difficultés</option>
+          <option value="facile">Facile</option>
+          <option value="intermediaire">Intermédiaire</option>
+          <option value="expert">Expert</option>
+        </select>
+      </div>
+      <!-- Les cartes sont créées en JavaScript à partir du tableau « plantes » -->
+      <div class="produits" id="catalogue"></div>
+    </section>
+
+    <aside class="panier" id="panier">
+      <h2>Mon panier (<span id="compteur-panier">0</span>)</h2>
+      <ul class="panier-lignes" id="panier-lignes"></ul>
+      <p class="panier-total">Total : <span id="panier-total">0,00 €</span></p>
+      <button type="button" class="bouton" id="vider-panier">Vider le panier</button>
+    </aside>
+
+  </div>
+
+  <footer class="footer">
+    <div class="footer-haut">
+      <div class="footer-marque">
+        <p class="logo">Verdure<span>.</span></p>
+        <p>La jardinerie de votre quartier, depuis 2015.</p>
+      </div>
+      <div class="footer-colonne">
+        <h4>Boutique</h4>
+        <ul>
+          <li><a href="#">Plantes</a></li>
+          <li><a href="#">Pots</a></li>
+          <li><a href="#">Accessoires</a></li>
+        </ul>
+      </div>
+      <div class="footer-colonne">
+        <h4>Nous trouver</h4>
+        <ul>
+          <li>8 place des Tilleuls</li>
+          <li>Du mardi au samedi</li>
+          <li>9 h – 19 h</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bas">
+      <p>© 2026 Verdure – Site réalisé en BTS SIO</p>
+      <ul class="footer-liens">
+        <li><a href="#">Mentions légales</a></li>
+        <li><a href="#">CGV</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>

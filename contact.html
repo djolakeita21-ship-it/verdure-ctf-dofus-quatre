@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact – Verdure</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- Scripts : ne pas changer l'ordre -->
+  <script src="js/ctf-config.js"></script>
+  <script src="js/plantes.js" defer></script>
+  <script src="js/commun.js" defer></script>
+  <script src="js/contact.js" defer></script>
+  <script src="js/ctf.js" defer></script>
+</head>
+<body>
+
+  <header class="header">
+    <a href="index.html" class="logo">Verdure<span>.</span></a>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="index.html#boutique">Boutique</a></li>
+        <li><a href="contact.html" class="actif">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button type="button" class="bouton-theme" id="bouton-theme">Thème sombre</button>
+      <a href="index.html#panier" class="bouton bouton-contour">Mon panier</a>
+    </div>
+  </header>
+
+  <main class="contact">
+    <h1>Contactez-nous</h1>
+    <p class="contact-intro">Une question sur une plante ? Écrivez-nous, un jardinier vous répond.</p>
+
+    <form class="formulaire" id="contact" novalidate>
+      <label for="contact-nom">Nom</label>
+      <input type="text" id="contact-nom">
+
+      <label for="contact-email">E-mail</label>
+      <input type="email" id="contact-email">
+
+      <label for="contact-message">Message</label>
+      <textarea id="contact-message" rows="5"></textarea>
+
+      <p class="erreur" id="contact-erreur"></p>
+      <button type="submit" class="bouton">Envoyer</button>
+    </form>
+
+    <div class="confirmation" id="contact-confirmation" hidden></div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-haut">
+      <div class="footer-marque">
+        <p class="logo">Verdure<span>.</span></p>
+        <p>La jardinerie de votre quartier, depuis 2015.</p>
+      </div>
+      <div class="footer-colonne">
+        <h4>Boutique</h4>
+        <ul>
+          <li><a href="#">Plantes</a></li>
+          <li><a href="#">Pots</a></li>
+          <li><a href="#">Accessoires</a></li>
+        </ul>
+      </div>
+      <div class="footer-colonne">
+        <h4>Nous trouver</h4>
+        <ul>
+          <li>8 place des Tilleuls</li>
+          <li>Du mardi au samedi</li>
+          <li>9 h – 19 h</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bas">
+      <p>© 2026 Verdure – Site réalisé en BTS SIO</p>
+      <ul class="footer-liens">
+        <li><a href="#">Mentions légales</a></li>
+        <li><a href="#">CGV</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>

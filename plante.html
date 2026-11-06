@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Fiche plante – Verdure</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- Scripts : ne pas changer l'ordre -->
+  <script src="js/ctf-config.js"></script>
+  <script src="js/plantes.js" defer></script>
+  <script src="js/commun.js" defer></script>
+  <script src="js/fiche.js" defer></script>
+  <script src="js/ctf.js" defer></script>
+</head>
+<body>
+
+  <header class="header">
+    <a href="index.html" class="logo">Verdure<span>.</span></a>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="index.html#boutique" class="actif">Boutique</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button type="button" class="bouton-theme" id="bouton-theme">Thème sombre</button>
+      <a href="index.html#panier" class="bouton bouton-contour">Mon panier</a>
+    </div>
+  </header>
+
+  <main class="fiche" id="fiche">
+    <a href="index.html#boutique" class="lien-retour">← Retour à la boutique</a>
+    <div class="fiche-contenu">
+      <div class="fiche-image" id="plante-image"></div>
+      <div class="fiche-infos">
+        <p class="surtitre" id="plante-latin"></p>
+        <h1 id="plante-nom">Plante introuvable</h1>
+        <p class="fiche-prix" id="plante-prix"></p>
+        <ul class="fiche-tags">
+          <li id="plante-difficulte"></li>
+          <li id="plante-lumiere"></li>
+          <li id="plante-arrosage"></li>
+        </ul>
+        <p class="fiche-description" id="plante-description"></p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-haut">
+      <div class="footer-marque">
+        <p class="logo">Verdure<span>.</span></p>
+        <p>La jardinerie de votre quartier, depuis 2015.</p>
+      </div>
+      <div class="footer-colonne">
+        <h4>Boutique</h4>
+        <ul>
+          <li><a href="#">Plantes</a></li>
+          <li><a href="#">Pots</a></li>
+          <li><a href="#">Accessoires</a></li>
+        </ul>
+      </div>
+      <div class="footer-colonne">
+        <h4>Nous trouver</h4>
+        <ul>
+          <li>8 place des Tilleuls</li>
+          <li>Du mardi au samedi</li>
+          <li>9 h – 19 h</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bas">
+      <p>© 2026 Verdure – Site réalisé en BTS SIO</p>
+      <ul class="footer-liens">
+        <li><a href="#">Mentions légales</a></li>
+        <li><a href="#">CGV</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>
