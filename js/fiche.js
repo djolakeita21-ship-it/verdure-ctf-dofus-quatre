@@ -6,3 +6,8 @@
    et plantes.find(...) permet de retrouver l'objet correspondant.
    ================================================= */
 
+const id = idDansURL();
+const plante = plantes.find(p => p.id === id);
+
+  document.querySelector("#plante-nom").textContent = plante.nom;
+  document.querySelector("#plante-prix").textContent = euros(plante.prix);
