@@ -5,7 +5,7 @@
    Le tableau des plantes s'appelle « plantes » (voir plantes.js).
    ================================================= */
 
-const catalogue = document.querySelector("#catalogue")
+const catalogue = document.querySelector("#catalogue");
 
 console.log(plantes)
 for (let i = 0; i<plantes.length; i++) {
@@ -14,3 +14,12 @@ for (let i = 0; i<plantes.length; i++) {
    catalogue.append(liste)
 }
 
+const recherche = document.querySelector("#recherche").ariaValueMax.trim();
+
+
+recherche.addEventListener("input", () => {
+  
+  var a = document.getElementById("#recherche").ariaValueText;
+      
+   }
+} )
