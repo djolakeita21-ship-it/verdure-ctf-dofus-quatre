@@ -7,6 +7,15 @@
    ================================================================= */
 (function () {
   "use strict";
+  // Si le script est chargé trop tôt (sans defer, dans le <head>),
+  // on attend que la page et les autres scripts soient prêts.
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", ctfVerdure);
+  } else {
+    ctfVerdure();
+  }
+
+  function ctfVerdure() {
 
   var SEL = atob(["dnJkLWN0", "Zi0yMDI2LWs3cQ=="].join(""));
   var DEFIS = [
@@ -59,8 +68,21 @@
   if (page.indexOf(".") === -1) page = "index.html";
 
   // Copie des données au démarrage (les modifier ne change rien ici)
+  // On ne garde que les champs utiles. Si plantes.js n’est pas encore
+  // chargé (ordre des scripts modifié), on réessaie à chaque vérification.
   var data = null;
-  try { data = JSON.parse(JSON.stringify(plantes)); } catch (e) { data = null; }
+  function chargerDonnees() {
+    if (data) return true;
+    try {
+      if (typeof plantes !== "undefined" && Array.isArray(plantes) && plantes.length > 0) {
+        data = plantes.map(function (p) {
+          return { id: Number(p.id), nom: String(p.nom), prix: Number(p.prix), difficulte: String(p.difficulte) };
+        });
+      }
+    } catch (e) { data = null; }
+    return !!data;
+  }
+  chargerDonnees();
 
   var sombre0 = document.body.classList.contains("sombre");
   var aClique = false, maxLignes = 0, envoi = null;
@@ -232,7 +254,11 @@
 
   /* ---------- boucle de vérification ---------- */
   function verifier() {
-    if (!groupeOk || !data) return;
+    if (!groupeOk) return;
+    if (!data) {
+      if (!chargerDonnees()) return;
+      rendre();
+    }
     maxLignes = Math.max(maxLignes, lignes().length);
     var nouveau = false;
     DEFIS.forEach(function (d) {
@@ -254,4 +280,5 @@
     document.addEventListener(t, function () { setTimeout(verifier, 120); }, true);
   });
   verifier();
+  }
 })();
