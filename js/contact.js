@@ -3,9 +3,17 @@
    Page contact.html : vérifier le formulaire avant l'envoi.
    Défis : J11, J12
    ================================================= */
+/*J-12 :formulaire de confirmation.*/
 
-const contact = document.querySelector("#contact")
+const confirmation = document.querySelector("#contact-confirmation");
 
-contact.addEventListener("submit", (event) =>{
    event.preventDefault();
-})
+formulaire.addEventListener("submit", function (event) {
+ 
+  
+  const nom = document.querySelector("#contact-nom").value;
+
+  confirmation.textContent = "Merci, " + nom + ". Votre message a été envoyé.";
+
+  confirmation.hidden = true;
+});
